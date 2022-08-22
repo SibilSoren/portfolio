@@ -1,23 +1,14 @@
-import logo from './logo.svg';
+import { useContext } from 'react';
 import './App.css';
-
+import HeroContent from './components/HeroContent';
+import NavigationBar from './components/NavigationBar/NavigationBar';
+import Store from './store';
 function App() {
+  const { isDarkMode } = useContext(Store);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={`App  lg:pr-40 lg:pl-40 md:pr-10 md:pl-10 sm:pr-5 sm:pl-5 h-screen ${isDarkMode ? `dark:bg-slate-800 dark:text-white` : ``} `}>
+      <NavigationBar />
+      <HeroContent />
     </div>
   );
 }
