@@ -9,7 +9,7 @@ const NavigationBar = () => {
 
     return (
         <div className='pt-10 flex justify-between'>
-            <p className='font-bold text-2xl font-lobster'>Sibil Sarjam Soren</p>
+            <p className='font-bold text-2xl font-lobster cursor-pointer'>Sibil Sarjam Soren</p>
             <div className='flex items-center'>
                 <Hamburger toggled={isOpen} toggle={setOpen} size={20} />
                 <DarkModeToggle
